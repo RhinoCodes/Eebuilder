@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="Eebuilder",
-    version="0.5.5.7",
+    version="1.0.0.1",
     author="Will F",
     author_email="forsbergw82@gmail.com",
     description="A Python package for creating HTML files",

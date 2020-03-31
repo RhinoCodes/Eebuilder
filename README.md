@@ -31,4 +31,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 # Latest Update
-  0.5.5.7 is just MORE bug fixes!
+  Version 1.0 is finally released!
