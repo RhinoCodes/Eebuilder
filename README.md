@@ -2,11 +2,11 @@
 The Purpose of this project is to make a easy way for people to make websites.
 # Installation
 `pip install eebuilder`
-# If You Download
+# If You Like It
 Please email me at forsbergw82@gmail.com!
 # Github Repository
 Click [Here](https://github.com/SuperMeteorite/Eebuilder)
-# Liscence
+# License
 
 Eebuilder License
 
