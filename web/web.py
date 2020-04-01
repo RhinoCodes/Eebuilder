@@ -2,16 +2,27 @@ import webbrowser
 
 files = []
 class NewPage:
-    def __init__(self, name):
+    def __init__(self, name, lang="", css="", title=""):
+        
+
         self.name = name
         self.file = name+'.html'
+        if title=="":
+            title = self.file
         open(self.file, 'w+').close()
+        with open(self.file, "w+") as f:
+            f.write(f"""
+            <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <link href="{css}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+            """)
 
-    def createindex(bc='white'):
-        f = open('index.html', 'w+')
-        files.append('index')
-        f.write("<body style='background-color: %s;'>" % bc)
-        f.close()
 
     def pic(self, path):
         f = open(self.file, 'a+')
@@ -20,27 +31,16 @@ class NewPage:
 
 
     def title(self, text):
-        f=open(file+'.html', 'a+')
+        f=open(self.file+'.html', 'a+')
         if file=='all':
             for item in files:
                 f=open(self.file, 'a+')
                 f.write('<title>%s</title>'% text)
                 f.close()
         else:
-            f = open(file+'.html', 'a')
+            f = open(self.file+'.html', 'a')
             f.write('<title>%s</title>'% text)
             f.close()
-
-    def customSearch(self, websiteToSearch, text='Search'):
-        f = open(self.file, 'a+')
-        f.write("""\n <iframe src=https://duckduckgo.com/search.html?site='"""+websiteToSearch+"""'&prefill="""+text+""" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe> \n""")
-        f=open(file+'.html', 'a+')
-        f.close()
-    def createpage(file, bc='white'):
-        f = open(file+'.html', 'w+')
-        files.append(file)
-        f.write("<body style='background-color: %s;'>" % bc)
-        f.close()
 
     def header(self, text, centered=False):
             f=open(self.file, 'a+')
@@ -111,7 +111,7 @@ class NewPage:
         f.close()
 
     def piclink(self, page, path):
-        f = open(file+'.html', 'a+')
+        f = open(self.file+'.html', 'a+')
         f.write("""
         <a href='"""+self.name+""".html'>
         <img src='"""+path+"""'>
