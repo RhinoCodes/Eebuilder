@@ -1,3 +1,4 @@
+<body style="text-align: center;">
 # Purpose
 The Purpose of this project is to make a easy way for people to make websites.
 # Installation
@@ -32,3 +33,4 @@ SOFTWARE.
 
 # Latest Update
   Version 1.0 is finally released!
+</body>
